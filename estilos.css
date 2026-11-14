@@ -889,8 +889,6 @@ footer {
 footer h2 {
     margin-bottom: 15px;
 }
-
-
 /* =====================================================
                     RESPONSIVE
 ===================================================== */
@@ -916,9 +914,12 @@ footer h2 {
     .hero h1 {
         font-size: 52px;
     }
-
 }
 
+
+/* =====================================================
+              TABLETS Y CELULARES
+===================================================== */
 
 @media (max-width: 700px) {
 
@@ -927,7 +928,8 @@ footer h2 {
     }
 
     .productos-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .destacados {
@@ -936,6 +938,7 @@ footer h2 {
 
     .nosotros-contenido {
         grid-template-columns: 1fr;
+        gap: 25px;
     }
 
     .pasos {
@@ -943,11 +946,12 @@ footer h2 {
     }
 
     .info-caja {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .hero {
-        min-height: 500px;
+        min-height: 450px;
+        padding: 20px 10px;
     }
 
     .hero h1 {
@@ -958,8 +962,12 @@ footer h2 {
         font-size: 24px;
     }
 
+    .hero p {
+        font-size: 16px;
+    }
+
     .carousel-item img {
-        height: 300px;
+        height: 280px;
     }
 
     .item-carrito {
@@ -970,30 +978,12 @@ footer h2 {
     .cantidad {
         margin: 10px;
     }
-
 }
 
 
-@media (max-width: 450px) {
-
-    .accesos {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .titulo {
-        font-size: 30px;
-    }
-
-    .carrito {
-        padding: 25px 15px;
-    }
-
-}
-/* MEJORAS PARA CELULARES */
+/* =====================================================
+              CELULARES PEQUEÑOS
+===================================================== */
 
 @media (max-width: 450px) {
 
@@ -1016,12 +1006,11 @@ footer h2 {
 
     .hero {
         min-height: 420px;
-        padding: 20px 10px;
-        background-position: center;
+        padding: 15px;
     }
 
     .hero-contenido {
-        padding: 15px;
+        padding: 10px;
     }
 
     .hero h1 {
@@ -1042,42 +1031,77 @@ footer h2 {
     }
 
     .boton {
-        padding: 13px 22px;
+        padding: 13px 20px;
     }
 
     .seccion {
-        padding: 45px 15px;
+        padding: 45px 12px;
+    }
+
+    .titulo {
+        font-size: 28px;
     }
 
     .carousel-item img {
         height: 220px;
-        border-radius: 15px;
+    }
+
+    /* DOS PRODUCTOS POR FILA */
+
+    .productos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .producto {
+        min-width: 0;
     }
 
     .producto-imagen img {
-        height: 210px;
+        height: 145px;
+        object-fit: cover;
     }
 
     .producto-contenido {
-        padding: 18px;
+        padding: 12px 8px;
+    }
+
+    .producto-contenido h3 {
+        font-size: 17px;
+    }
+
+    .producto-contenido p {
+        font-size: 13px;
+        min-height: auto;
+    }
+
+    .precio {
+        font-size: 19px;
+        margin: 12px 0;
     }
 
     .producto-contenido button {
-        min-height: 46px;
+        padding: 11px 5px;
+        font-size: 13px;
+        min-height: 42px;
     }
 
     .carrito-seccion {
-        padding: 40px 12px;
+        padding: 40px 10px;
+    }
+
+    .carrito {
+        padding: 20px 12px;
     }
 
     .total {
-        font-size: 19px;
+        font-size: 18px;
         gap: 10px;
     }
 
     .boton-whatsapp {
         max-width: 100%;
-        padding: 13px 18px;
+        padding: 13px 16px;
     }
 
     .qr-caja {
@@ -1086,6 +1110,23 @@ footer h2 {
     }
 
     .contacto h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
+
+    .telefono {
+        font-size: 19px;
+    }
+
+    .info-caja {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .accesos {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
 }
+
+
