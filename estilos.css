@@ -296,13 +296,20 @@ img {
 }
 
 .nosotros-imagen img {
-    width: 100%;
+    width:400px;
 
-    height: 430px;
+    height: 400px;
 
-    object-fit: cover;
+    object-fit: contain;
 
-    border-radius: 25px;
+    border-radius: 0%;
+    clip-path: none;
+
+    display: block;
+
+    margin: 20px auto;
+
+    
 }
 
 
